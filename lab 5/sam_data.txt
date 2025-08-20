@@ -1,0 +1,5 @@
+Name:sam
+Age:18
+Email:dcdwe@gmail.com
+Phone Number:32152436257
+Address: 25-1-256
