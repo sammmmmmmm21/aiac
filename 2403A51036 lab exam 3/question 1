@@ -1,0 +1,27 @@
+num_values = 15
+
+print(f"--- First {num_values} Fibonacci values (DP Tabulation) ---")
+start_time_dp = time.time()
+for i in range(num_values):
+    print(f"fibonacci_dp({i}) = {fibonacci_dp(i)}")
+end_time_dp = time.time()
+runtime_dp = (end_time_dp - start_time_dp) * 1000 # in milliseconds
+print(f"DP Tabulation Runtime for {num_values} values: {runtime_dp:.4f} ms\n")
+
+print(f"--- First {num_values} Fibonacci values (Recursive) ---")
+start_time_recursive = time.time()
+for i in range(num_values):
+    print(f"fibonacci_recursive({i}) = {fibonacci_recursive(i)}")
+end_time_recursive = time.time()
+runtime_recursive = (end_time_recursive - start_time_recursive) * 1000 # in milliseconds
+print(f"Recursive Runtime for {num_values} values: {runtime_recursive:.4f} ms\n")
+
+print("--- Runtime Comparison ---")
+print(f"DP Tabulation Runtime: {runtime_dp:.4f} ms")
+print(f"Recursive Runtime: {runtime_recursive:.4f} ms")
+if runtime_dp < runtime_recursive:
+    print(f"DP Tabulation is faster by: {(runtime_recursive - runtime_dp):.4f} ms")
+elif runtime_recursive < runtime_dp:
+    print(f"Recursive version is faster by: {(runtime_dp - runtime_recursive):.4f} ms")
+else:
+    print("Both versions have similar runtimes.")
